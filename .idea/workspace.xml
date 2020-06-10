@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a0a6a9-3d5e-49aa-88b1-0bb0537bf558" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +182,8 @@
       <workItem from="1591180610619" duration="904000" />
       <workItem from="1591542354316" duration="4267000" />
       <workItem from="1591629022998" duration="15401000" />
-      <workItem from="1591714814528" duration="10444000" />
+      <workItem from="1591714814528" duration="11373000" />
+      <workItem from="1591799017859" duration="4687000" />
     </task>
     <servers />
   </component>

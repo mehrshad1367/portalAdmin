@@ -11,7 +11,7 @@
                 </div>
                 <div>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-5">
-                        <a href="#" class = "btn btn-primary p-2 m-2">Edit Profile</a>
+                        <a href="{{route('profile.edit')}}" class = "btn btn-primary p-2 m-2">Edit Profile</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                         <div class="card-body text-capitalize" >
                             id: {{Auth::user()->id}} <br>
                             Name: {{Auth::user()->name}}<br>
-                            Family: {{Auth::user()->name}}<br>
+                            Family: {{Auth::user()->family}}<br>
                             Email: {{Auth::user()->email}}
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                         </div>
                         <div class="card-body text-capitalize">
                             Email: {{Auth::user()->email}}<br>
-                            MobilePhone: ##########<br>
-                            office Phone: ##########<br>
+                            MobilePhone: {{Auth::user()->phone}}<br>
+                            office Phone: {{Auth::user()->office_tel}}<br>
                         </div>
                     </div>
 
@@ -119,4 +119,7 @@
                     </div>
                 </div>
                 <!-- /.col -->
+            </div>
+        </div></section>
+</div>
 @endsection
