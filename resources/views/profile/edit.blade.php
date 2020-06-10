@@ -22,15 +22,15 @@
                         @endif
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="" name="name" id="name" class="form-control" required value="{{Auth::user()->name}}">
+                            <input type="" name="name" id="name" class="form-control text-capitalize" required value="{{Auth::user()->name}}">
                             @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="family">Lastname:</label>
-                            <input type="text" name="family" id="family" class="form-control" required
-                                   value="{{Auth::user()->name}}">
+                            <input type="text" name="family" id="family" class="form-control text-capitalize" required
+                                   value="{{Auth::user()->family}}">
                             @error('family')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -51,7 +51,7 @@
                         </div>
                         <div class="form-group">
                             <label for="position">Position:</label>
-                            <input type="text" name="position" id="Position" class="form-control" required value="{{Auth::user()->name}}">
+                            <input type="text" name="position" id="Position" class="form-control text-capitalize" required value="{{Auth::user()->position}}">
                             @error('position')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

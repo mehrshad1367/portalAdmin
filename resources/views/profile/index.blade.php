@@ -106,8 +106,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                 <div class="dropdown-header">Photo Setting:</div>
-                                <a class="dropdown-item" href="#">Change your photo</a>
-                                <a class="dropdown-item" href="#">Delete</a>
+                                <button class = "btn btn-primary" style="cursor: pointer ; color: white" data-id="{{ Auth::user()->id }}" onclick="openImageUpdateModal(this)" id="btn_img">Change your photo</button>
+                                <button class="dropdown-item" href="#">Delete</button>
 
                             </div>
                         </div>
@@ -121,5 +121,33 @@
                 <!-- /.col -->
             </div>
         </div></section>
+</div>
+
+<!-- Update Profile Image-->
+<div class="modal fade" id="UpdateProfileImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Profile Image</h5>
+            </div>
+            <p id="up-message" class="text-dark"></p>
+            <div class="modal-body">
+                <p class="alert-danger" id="blank_UP_message"></p>
+                <p class="alert-success" id="done_UP_message"></p>
+                <form id="user-update-img">
+                    <label class="custom-file-label mt-3 ml-2 mr-2">Profile Image Address</label>
+                    <input type="file" class="form-control custom-file-input" placeholder="" id="up_image">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="submit" id="btn_updateImg" onclick="updateImg(this)">Update</button>
+            </div>
+
+
+
+        </div>
+    </div>
 </div>
 @endsection

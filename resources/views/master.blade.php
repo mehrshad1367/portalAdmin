@@ -6,6 +6,8 @@
     <title>AdminLTE 3 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('portal/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
@@ -805,5 +807,7 @@
 <script src="{{asset('portal/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('portal/dist/js/demo.js')}}"></script>
+
+<script src="{{asset('portal/dist/js/MyJs.js')}}"></script>
 </body>
 </html>

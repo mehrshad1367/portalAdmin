@@ -26,5 +26,7 @@ Route::namespace('profile')->group(function (){
     Route::get('/profile', 'ProfileController@show')->name('profile');
     Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
     Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
+    Route::get('/profile/image', 'ProfileController@imageindex')->name('profile.img');
+    Route::post('/profile/image/update', 'ProfileController@imageupdate')->name('profile.imgUpdate');
 });
 
