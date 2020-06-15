@@ -35,15 +35,16 @@ class ProfileController extends Controller
         return view('profile.index', ['user' => $user]);
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('profile.edit');
+        $user = $this->user->get($id);
+        return view('profile.edit',['user'=> $user]);
     }
 
-    public function update($user_data)
+    public function update($id)
     {
 
-        $this->user->update($user_data);
+        $this->user->update($id);
         return redirect()->route('profile');
     }
 }

@@ -12,5 +12,5 @@ interface UserRepositoryInterface
 
     public function delete($id);
 
-    public function update($id , array $user_data);
+    public function update($id);
 }

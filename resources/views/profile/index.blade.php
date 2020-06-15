@@ -11,7 +11,7 @@
                 </div>
                 <div>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-5">
-                        <a href="{{route('profile.edit')}}" class = "btn btn-primary p-2 m-2">Edit Profile</a>
+                        <a href="{{url('profile/edit',['id'=> $user->id])}}" class = "btn btn-primary p-2 m-2">Edit Profile</a>
                     </div>
                 </div>
             </div>

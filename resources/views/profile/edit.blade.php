@@ -7,12 +7,12 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800 text-capitalize">{{Auth::user()->name}}'s page</h1>
+                <h1 class="h3 mb-0 text-gray-800 text-capitalize">{{$user->name}}'s page</h1>
             </div>
 
             <div class="row">
                 <div class="col-sm-8 offset-sm-2">
-                    <form action="{{route('profile.update')}}" method="post">
+                    <form action="{{route('profile.update',['id'=>$user->id])}}" method="post">
                         @csrf
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success alert-block">
@@ -22,7 +22,7 @@
                         @endif
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="" name="name" id="name" class="form-control" required value="{{Auth::user()->name}}">
+                            <input type="" name="name" id="name" class="form-control" required value="{{$user->name}}">
                             @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -30,14 +30,14 @@
                         <div class="form-group">
                             <label for="family">Lastname:</label>
                             <input type="text" name="family" id="family" class="form-control" required
-                                   value="{{Auth::user()->name}}">
+                                   value="{{$user->family}}">
                             @error('family')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="text" name="email" id="email" class="form-control" required value="{{Auth::user()->email}}">
+                            <input type="text" name="email" id="email" class="form-control" required value="{{$user->email}}">
                             @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -51,7 +51,7 @@
                         </div>
                         <div class="form-group">
                             <label for="position">Position:</label>
-                            <input type="text" name="position" id="Position" class="form-control" required value="{{Auth::user()->name}}">
+                            <input type="text" name="position" id="Position" class="form-control" required value="{{$user->name}}">
                             @error('position')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -65,14 +65,14 @@
 {{--                        </div>--}}
                         <div class="form-group">
                             <label for="phone">Mobile Number:</label>
-                            <input type="text" name="phone" id="phone" class="form-control" required value="{{Auth::user()->phone}}">
+                            <input type="text" name="phone" id="phone" class="form-control" required value="{{$user->phone}}">
                             @error('mophone')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="office_tel">Office Tel:</label>
-                            <input type="text" name="office_tel" id="office_tel" class="form-control" required value="{{Auth::user()->office_tel}}">
+                            <input type="text" name="office_tel" id="office_tel" class="form-control" required value="{{$user->office_tel}}">
                             @error('phone')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -88,7 +88,7 @@
         {{--                        @endforeach--}}
         {{--                        @endif--}}
 {{--                            </div></br>--}}
-                            <input type="hidden" name="id" value="{{Auth::user()->name}}">
+                            <input type="hidden" name="id" value="{{$user->name}}">
                             <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>

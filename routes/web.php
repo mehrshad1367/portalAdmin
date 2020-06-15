@@ -24,8 +24,8 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::namespace('profile')->group(function (){
     Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
-    Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
-    Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
+    Route::get('/profile/edit/{id}', 'ProfileController@edit')->name('profile.edit');
+    Route::post('/profile/update/{id}', 'ProfileController@update')->name('profile.update');
     Route::get('/int', 'ProfileController@index')->name('int');
 });
 

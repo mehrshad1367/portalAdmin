@@ -21,7 +21,6 @@ class UserRepository implements UserRepositoryInterface
     public function get($id)
     {
         // TODO: Implement get() method.
-
         $user = User::find($id);
         return $user;
     }
@@ -33,11 +32,12 @@ class UserRepository implements UserRepositoryInterface
         return back();
     }
 
-    public function update($id, array $user_data)
+    public function update($id)
     {
         // TODO: Implement update() method.
-        $user = User::find('id' ,'=', $id)->get();
-        $user->update($user_data);
+        $user = User::find($id);
+        $user->update(request());
+        dd($user);
     }
 
 }
