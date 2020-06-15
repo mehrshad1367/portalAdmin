@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-10">
-                    <h1 class="h3 mb-0 text-gray-800 text-capitalize">Welcome {{Auth::user()->name}}</h1>
+                    <h1 class="h3 mb-0 text-gray-800 text-capitalize">Welcome {{$user->name}}</h1>
                 </div>
                 <div>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-5">
@@ -52,10 +52,10 @@
                             </h6>
                         </div>
                         <div class="card-body text-capitalize" >
-                            id: {{Auth::user()->id}} <br>
-                            Name: {{Auth::user()->name}}<br>
-                            Family: {{Auth::user()->family}}<br>
-                            Email: {{Auth::user()->email}}
+                            id: {{$user->id}} <br>
+                            Name: {{$user->name}}<br>
+                            Family: {{$user->family}}<br>
+                            Email: {{$user->email}}
                         </div>
                     </div>
 
@@ -65,9 +65,9 @@
                             <h6 class="m-0 font-weight-bold text-primary">Contact Info</h6>
                         </div>
                         <div class="card-body text-capitalize">
-                            Email: {{Auth::user()->email}}<br>
-                            MobilePhone: {{Auth::user()->phone}}<br>
-                            office Phone: {{Auth::user()->office_tel}}<br>
+                            Email: {{$user->email}}<br>
+                            MobilePhone: {{$user->phone}}<br>
+                            office Phone: {{$user->office_tel}}<br>
                         </div>
                     </div>
 

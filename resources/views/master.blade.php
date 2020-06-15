@@ -45,7 +45,7 @@
 
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="{{route('profile')}}" >
+                    <a class="dropdown-item" href="{{url('profile',['id'=>Auth::user()->id])}}" >
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profile
                     </a>
@@ -208,7 +208,7 @@
                     <img src="{{asset('portal/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info dropdown-menu-right">
-                    <a href="{{route('profile')}}" class="d-block">Alexander Pierce</a>
+                    <a href="{{url('profile',['id'=>Auth::user()->id])}}" class="d-block">Alexander Pierce</a>
                 </div>
             </div>
 

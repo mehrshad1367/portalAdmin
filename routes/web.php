@@ -23,8 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::namespace('profile')->group(function (){
-    Route::get('/profile', 'ProfileController@show')->name('profile');
+    Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
     Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
     Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
+    Route::get('/int', 'ProfileController@index')->name('int');
 });
 
