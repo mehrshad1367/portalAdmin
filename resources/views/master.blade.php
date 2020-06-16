@@ -40,7 +40,6 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="btn btn-light mr-2 d-none d-lg-inline text-gray-600 small text-capitalize">{{Auth::user()->name}}</span>
-                    {{--                    <img class="img-profile rounded-circle" src="<?php $url = Storage::url(Auth::user()->img); echo asset("$url")?>">--}}
                 </a>
 
                 <!-- Dropdown - User Information -->
@@ -205,7 +204,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="{{asset('portal/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+                    <img src="<?php $url= Storage::url(\Illuminate\Support\Facades\Auth::user()->avatar); echo asset("$url"); ?>" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info dropdown-menu-right">
                     <a href="{{url('profile',['id'=>Auth::user()->id])}}" class="d-block">Alexander Pierce</a>
@@ -805,5 +804,7 @@
 <script src="{{asset('portal/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('portal/dist/js/demo.js')}}"></script>
+
+<script src="{{asset('portal/dist/js/MyJs.js')}}"></script>
 </body>
 </html>

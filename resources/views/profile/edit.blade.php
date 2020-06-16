@@ -44,36 +44,8 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input type="text" name="password" id="Password" class="form-control">
+                            <input type="password" placeholder="You Can Enter New Password" name="password" id="passInput" class="form-control">
                             @error('password')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="position">Position:</label>
-                            <input type="text" name="position" id="Position" class="form-control" required value="{{$user->name}}">
-                            @error('position')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-{{--                        <div class="form-group">--}}
-{{--                            <label for="office">Office:</label>--}}
-{{--                            <input type="text" name="office" id="office" class="form-control" required value="{{Auth::user()->name}}">--}}
-{{--                            @error('office')--}}
-{{--                            <div class="alert alert-danger">{{ $message }}</div>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
-                        <div class="form-group">
-                            <label for="phone">Mobile Number:</label>
-                            <input type="text" name="phone" id="phone" class="form-control" required value="{{$user->phone}}">
-                            @error('mophone')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="office_tel">Office Tel:</label>
-                            <input type="text" name="office_tel" id="office_tel" class="form-control" required value="{{$user->office_tel}}">
-                            @error('phone')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

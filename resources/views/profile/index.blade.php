@@ -66,8 +66,8 @@
                         </div>
                         <div class="card-body text-capitalize">
                             Email: {{$user->email}}<br>
-                            MobilePhone: {{$user->phone}}<br>
-                            office Phone: {{$user->office_tel}}<br>
+                            MobilePhone: #####<br>
+                            office Phone: #####<br>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                 <div class="dropdown-header">Photo Setting:</div>
-                                <a class="dropdown-item" href="#">Change your photo</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#changeImg">Change your photo</a>
                                 <a class="dropdown-item" href="#">Delete</a>
 
                             </div>
@@ -114,11 +114,41 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
-                        <img src="{{asset("portal/dist/img/avatar3.png")}}" alt="profil image" class="rounded mx-auto d-block" style="width: 200px; height: 266px">
+                        <img src="<?php $url= Storage::url(\Illuminate\Support\Facades\Auth::user()->avatar); echo asset("$url")?>" alt="profil image" class="rounded mx-auto d-block" style="width: 200px; height: 266px">
                         {{--                                    <img src="<?php $url = Storage::url(\Illuminate\Support\Facades\Auth::user()->img); echo asset("$url")?>" class="rounded mx-auto d-block" style="width: 200px; height: 266px">--}}
                     </div>
                 </div>
                 <!-- /.col -->
+            </div>
+
+
+    {{--   Modal Avatar   --}}
+            <div class="modal fade" id="changeImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Choose your Photo</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <form method="post" action="{{url('/profile/avatar',['id'=>Auth::user()->id])}}" class="uploader" enctype="multipart/form-data">
+                            @csrf
+                        <div>
+                        <div class="modal-body ">Select Select Photo Address.</div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputProfileImg" name="avatar">
+                                <label class="custom-file-label" for="#inputProfileImg">Choose file</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div></section>
 </div>

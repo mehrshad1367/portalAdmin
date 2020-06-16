@@ -41,10 +41,26 @@ class ProfileController extends Controller
         return view('profile.edit',['user'=> $user]);
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
 
-        $this->user->update($id);
-        return redirect()->route('profile');
+        $validation = $request->validate([
+            'name' => 'required|min:2|max:50',
+            'family' => 'required|min:2|max:50',
+            'email' => 'required|min:2|max:50',
+            'password' => 'required|min:2|max:50',
+        ]);
+        if ($validation) {
+            $this->user->update($request, $id);
+            return redirect()->back();
+        }else{
+            return back();
+        }
+    }
+
+    public function avatar(Request $request,$id)
+    {
+        $this->user->avatar($request,$id);
+        return redirect(url('profile',['id'=>Auth::user()->id]));
     }
 }

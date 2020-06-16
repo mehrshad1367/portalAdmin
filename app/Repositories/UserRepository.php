@@ -11,6 +11,11 @@ class UserRepository implements UserRepositoryInterface
 {
     protected $model;
 
+public function __construct(User $user)
+{
+    $this->model = $user;
+}
+
     public function all()
     {
         // TODO: Implement all() method.
@@ -32,12 +37,30 @@ class UserRepository implements UserRepositoryInterface
         return back();
     }
 
-    public function update($id)
+    public function update($request,$id)
     {
         // TODO: Implement update() method.
         $user = User::find($id);
-        $user->update(request());
-        dd($user);
+        if(isset($request->password)) {
+            $this->model->update([$user->name = $request->name,
+                                  $user->family = $request->family,
+                                  $user->password = $request->password
+            ]);
+            $user->save();
+        }else{
+            $this->model->update([$user->name = $request->name,
+                                  $user->family = $request->family,
+            ]);
+            $user->save();
+        }
+    }
+
+    public function avatar($request,$id)
+    {
+        $user = User::find($id);
+        $this->model->update([$user->avatar = $request->file('avatar')->store('public')]);
+        $user->save();
+
     }
 
 }
