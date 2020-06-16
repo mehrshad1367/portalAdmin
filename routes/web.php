@@ -28,5 +28,6 @@ Route::namespace('profile')->group(function (){
     Route::post('/profile/update/{id}', 'ProfileController@update')->name('profile.update');
     Route::get('/int', 'ProfileController@index')->name('int');
     Route::post('/profile/avatar/{id}', 'ProfileController@avatar')->name('avatar');
+    Route::post('/profile/editPass/{id}', 'ProfileController@password')->name('editPass');
 });
 

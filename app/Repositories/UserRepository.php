@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Repositories\Interfaces\UserRepositoryInterface;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
@@ -61,6 +62,15 @@ public function __construct(User $user)
         $this->model->update([$user->avatar = $request->file('avatar')->store('public')]);
         $user->save();
 
+    }
+
+    public function password($request, $id)
+    {
+        $user=User::find($id);
+        $this->model->update([
+            $user->password = Hash::make($request->password),
+        ]);
+        $user->save();
     }
 
 }

@@ -42,13 +42,6 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" placeholder="You Can Enter New Password" name="password" id="passInput" class="form-control">
-                            @error('password')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
 
         {{--                @if(!empty($roles))--}}
         {{--                    <div class="form-check form-check-inline">--}}

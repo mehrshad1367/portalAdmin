@@ -48,7 +48,6 @@ class ProfileController extends Controller
             'name' => 'required|min:2|max:50',
             'family' => 'required|min:2|max:50',
             'email' => 'required|min:2|max:50',
-            'password' => 'required|min:2|max:50',
         ]);
         if ($validation) {
             $this->user->update($request, $id);
@@ -62,5 +61,19 @@ class ProfileController extends Controller
     {
         $this->user->avatar($request,$id);
         return redirect(url('profile',['id'=>Auth::user()->id]));
+    }
+
+    public function password(Request $request,$id)
+    {
+        $validation = $request->validate([
+            'password' => 'required|min:3|confirmed',
+            'password_confirmation' => 'required',
+        ]);
+        if ($validation) {
+            $this->user->password($request, $id);
+            return redirect(url('profile', ['id' => Auth::user()->id]));
+        }else{
+            return back()->withErrors(['Something is wrong with your new password']);
+        }
     }
 }

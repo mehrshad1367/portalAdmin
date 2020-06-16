@@ -9,10 +9,13 @@
                 <div class="col-lg-10">
                     <h1 class="h3 mb-0 text-gray-800 text-capitalize">Welcome {{$user->name}}</h1>
                 </div>
-                <div>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-5">
-                        <a href="{{url('profile/edit',['id'=> $user->id])}}" class = "btn btn-primary p-2 m-2">Edit Profile</a>
-                    </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Edit Profile<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="p-1 font-weight-light"><a href="{{url('profile/edit',['id'=> $user->id])}}">Change your Info</a></li>
+                        <li class="p-1 font-weight-light"><a href="#" data-toggle="modal" data-target="#changePass">Change your Password</a></li>
+                    </ul>
                 </div>
             </div>
             @if ($message = Session::get('success'))
@@ -146,6 +149,51 @@
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {{--   Modal Password   --}}
+            <div class="modal fade" id="changePass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Choose your Photo</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <form method="post" action="{{ url('/profile/editPass',['id'=>Auth::user()->id])}}" class="uploader" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group mb-3 ">
+                                <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+
+                                <input id="password-confirm" type="password" placeholder="Re-Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 m-2">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>

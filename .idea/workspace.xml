@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a0a6a9-3d5e-49aa-88b1-0bb0537bf558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StoreBlogPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/portal/dist/js/MyJs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/changePass.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/UserRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/UserRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -204,7 +200,9 @@
       <workItem from="1592203150673" duration="5269000" />
       <workItem from="1592226432132" duration="4751000" />
       <workItem from="1592247627487" duration="3525000" />
-      <workItem from="1592288266432" duration="11803000" />
+      <workItem from="1592288266432" duration="12396000" />
+      <workItem from="1592322980276" duration="6200000" />
+      <workItem from="1592338343906" duration="1150000" />
     </task>
     <servers />
   </component>
@@ -235,6 +233,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="469" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1592122710996" />
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1592328038398">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1592328038398" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1592117417427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
