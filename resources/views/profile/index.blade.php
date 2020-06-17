@@ -36,6 +36,11 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @endif
+            @if (session('passError'))
+                <div class="alert alert-success">
+                    {{ session('passError') }}
+                </div>
+            @endif
         </div><!-- /.container-fluid -->
     </section>
 

@@ -20,7 +20,6 @@ class ProfileController extends Controller
     public function index()
     {
         $users = $this->user->all();
-        dd($users->toArray());
 //        $data=[
 //            'users' => $this->user->all()
 //        ];
@@ -73,7 +72,7 @@ class ProfileController extends Controller
             $this->user->password($request, $id);
             return redirect(url('profile', ['id' => Auth::user()->id]));
         }else{
-            return back()->withErrors(['Something is wrong with your new password']);
+            return back('profile',['id'=>Auth::user()->id])->with('passError','Something is wrong with your new password');
         }
     }
 }
