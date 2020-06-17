@@ -16,5 +16,5 @@ interface UserRepositoryInterface
 
     public function avatar(array $data,$id);
 
-    public function password(array $data,$id);
+    public function update_password(array $data,$id);
 }

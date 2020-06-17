@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
-    protected $model;
+    protected $model;  //Ok
 
 public function __construct(User $user)
 {
@@ -21,55 +21,44 @@ public function __construct(User $user)
     {
         // TODO: Implement all() method.
 
-        return User::all();
+        return $this->model->all();
     }
 
     public function get($id)
     {
         // TODO: Implement get() method.
-        $user = User::find($id);
+        $user = $this->model->findOrFail($id);
         return $user;
     }
 
     public function delete($id)
     {
         // TODO: Implement delete() method.
-        User::destroy('id','=', $id);
+        $this->model->destroy('id','=', $id);
         return back();
     }
 
-    public function update($request,$id)
+    public function update(array $input,$id)
     {
         // TODO: Implement update() method.
-        $user = User::find($id);
-        if(isset($request->password)) {
-            $this->model->update([$user->name = $request->name,
-                                  $user->family = $request->family,
-                                  $user->password = $request->password
-            ]);
-            $user->save();
-        }else{
-            $this->model->update([$user->name = $request->name,
-                                  $user->family = $request->family,
-            ]);
-            $user->save();
-        }
+        $user=$this->model->findOrFail($id);
+            $user->update($input);
+            return $user;
     }
 
     public function avatar($request,$id)
     {
-        $user = User::find($id);
-        $this->model->update([$user->avatar = $request->file('avatar')->store('public')]);
+        $user = $this->model->findOrFail($id);
+        $user->update([$user->avatar = $request->file('avatar')->store('public')]);
         $user->save();
 
     }
 
-    public function password($request, $id)
+    public function update_password(array $input, $id)
     {
-        $user=User::find($id);
-        $this->model->update([
-            $user->password = Hash::make($request->password),
-        ]);
+        $user=$this->model->findOrFail($id);
+        $input['password']=Hash::make($input['password']);
+        $user->update($input);
         $user->save();
     }
 

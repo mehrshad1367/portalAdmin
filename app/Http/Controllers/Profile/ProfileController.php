@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    protected $user;
+    protected $user;  //UserRepository
 
     public function __construct(UserRepositoryInterface $user)
     {
@@ -42,14 +42,14 @@ class ProfileController extends Controller
 
     public function update(Request $request, $id)
     {
-
+        $input=$request->all();
         $validation = $request->validate([
             'name' => 'required|min:2|max:50',
             'family' => 'required|min:2|max:50',
             'email' => 'required|min:2|max:50',
         ]);
         if ($validation) {
-            $this->user->update($request, $id);
+            $this->user->update($input, $id);
             return redirect()->back();
         }else{
             return back();
@@ -62,14 +62,15 @@ class ProfileController extends Controller
         return redirect(url('profile',['id'=>Auth::user()->id]));
     }
 
-    public function password(Request $request,$id)
+    public function update_password(Request $request,$id)
     {
+        $input= $request->all();
         $validation = $request->validate([
             'password' => 'required|min:3|confirmed',
             'password_confirmation' => 'required',
         ]);
         if ($validation) {
-            $this->user->password($request, $id);
+            $this->user->update_password($input, $id); //update_Password , $request->all()
             return redirect(url('profile', ['id' => Auth::user()->id]));
         }else{
             return back('profile',['id'=>Auth::user()->id])->with('passError','Something is wrong with your new password');
