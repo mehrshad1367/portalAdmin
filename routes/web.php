@@ -21,6 +21,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Route::get('/contact', 'ContactController@index')->name('contact');
 
 Route::namespace('profile')->group(function (){

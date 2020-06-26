@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
+
     protected $user;  //UserRepository
 
     public function __construct(UserRepositoryInterface $user)
