@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\profile;
 
 use App\Http\Controllers\Controller;
+use App\Http\Models\Service;
 use App\Repositories\Interfaces\UserRepositoryInterface;
-use App\User;
+use App\Http\Models\User;
+use App\Http\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +30,12 @@ class ProfileController extends Controller
 
     public function show($id)
     {
+        $user = Auth::user()->role->service;
+//        $user_service = $user_role;
 
+        $user_service=$user[0]->service;
+        dd($user_service);
+//        if (str_contains(url()->current(), $user_service))
         $user = $this->user->get($id);
 
         return view('profile.index', ['user' => $user]);

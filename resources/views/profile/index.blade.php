@@ -60,7 +60,7 @@
                             </h6>
                         </div>
                         <div class="card-body text-capitalize" >
-                            id: {{$user->id}} <br>
+                            role: {{ $user->role->role }} <br>
                             Name: {{$user->name}}<br>
                             Family: {{$user->family}}<br>
                             Email: {{$user->email}}

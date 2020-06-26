@@ -5,7 +5,7 @@ namespace App\Repositories;
 
 
 use App\Repositories\Interfaces\UserRepositoryInterface;
-use App\User;
+use App\Http\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
@@ -26,8 +26,8 @@ public function __construct(User $user)
 
     public function get($id)
     {
-        // TODO: Implement get() method.
         $user = $this->model->findOrFail($id);
+
         return $user;
     }
 
