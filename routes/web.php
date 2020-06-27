@@ -24,12 +24,12 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/contact', 'ContactController@index')->name('contact');
 
-Route::namespace('profile')->group(function (){
-    Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
+Route::group(['middleware'=>['access'],'namespace' => 'profile'],function (){
+    Route::get('/profile/{id}', 'ProfileController@show')->name('profile.show');
     Route::get('/profile/edit/{id}', 'ProfileController@edit')->name('profile.edit');
     Route::post('/profile/update/{id}', 'ProfileController@update')->name('profile.update');
     Route::get('/', 'ProfileController@index')->name('int');
-    Route::post('/profile/avatar/{id}', 'ProfileController@avatar')->name('avatar');
-    Route::post('/profile/editPass/{id}', 'ProfileController@update_password')->name('editPass');
+    Route::post('/profile/avatar/{id}', 'ProfileController@avatar')->name('profile.avatar');
+    Route::post('/profile/editPass/{id}', 'ProfileController@update_password')->name('profile.editPass');
 });
 

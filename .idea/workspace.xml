@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a0a6a9-3d5e-49aa-88b1-0bb0537bf558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/portal/build/js/MyJs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckPortalServiceAccess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +218,8 @@
       <workItem from="1592851987438" duration="4732000" />
       <workItem from="1592897683855" duration="6093000" />
       <workItem from="1593162878116" duration="481000" />
-      <workItem from="1593179710902" duration="3977000" />
+      <workItem from="1593179710902" duration="8020000" />
+      <workItem from="1593243873888" duration="2397000" />
     </task>
     <servers />
   </component>
@@ -248,6 +246,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592583531393" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593187083468">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593187083468" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1592218085483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -264,10 +266,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592117417427" />
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1593183416771">
+    <state x="349" y="27" width="585" height="534" key="find.popup" timestamp="1593184470907">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593183416771" />
+    <state x="349" y="27" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593184470907" />
     <state x="456" y="237" width="612" height="282" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592117389129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

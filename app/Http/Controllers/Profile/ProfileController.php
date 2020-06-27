@@ -23,19 +23,12 @@ class ProfileController extends Controller
     public function index()
     {
         $users = $this->user->all();
-//        $data=[
-//            'users' => $this->user->all()
-//        ];
-//        return view('profile.index');
     }
 
-    public function show($id)
+    public function show(Request $request,$id)
     {
-        $user = Auth::user()->role->service;
-//        $user_service = $user_role;
 
-        $user_service=$user[0]->service;
-        dd($user_service);
+
 //        if (str_contains(url()->current(), $user_service))
         $user = $this->user->get($id);
 
