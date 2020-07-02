@@ -4,7 +4,7 @@
 namespace App\Repositories\Interfaces;
 
 
-interface UserRepositoryInterface
+interface RepositoryInterface
 {
     public function all();
 
@@ -14,7 +14,5 @@ interface UserRepositoryInterface
 
     public function update(array $data,$id);
 
-    public function avatar(array $data,$id);
-
-    public function update_password(array $data,$id);
+    public function create(array $data);
 }

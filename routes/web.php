@@ -32,4 +32,13 @@ Route::group(['middleware'=>['access'],'namespace' => 'profile'],function (){
     Route::post('/profile/avatar/{id}', 'ProfileController@avatar')->name('profile.avatar');
     Route::post('/profile/editPass/{id}', 'ProfileController@update_password')->name('profile.editPass');
 });
+Route::namespace('MessageCenter')->group(function (){
+    Route::get('/msg','MessageCenterController@index')->name('msg.index');
+    Route::get('/msg/{id}','MessageCenterController@show')->name('msg.show')->where('id','[0-9]+');
+    Route::get('/msg/write','MessageCenterController@write')->name('msg.write');
+    Route::post('/msg/send','MessageCenterController@send')->name('msg.send');
+    Route::get('/msg/outbox','MessageCenterController@outbox')->name('msg.outbox');
+//    Route::get('msg/send','MessageCenterController@send')->name('msg.send');
+});
+
 

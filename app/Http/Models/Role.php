@@ -11,7 +11,7 @@ class Role extends Model
 
     public function user()
     {
-        return $this->hasMany('App\Http\Models\User' );
+        return $this->hasMany('App\Http\Models\User','user_id' );
     }
 
     public function service()

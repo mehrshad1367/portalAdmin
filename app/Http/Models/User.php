@@ -41,4 +41,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo('App\Http\Models\Role' , 'role_id');
     }
+
+    public function messagecenter()
+    {
+        return $this->hasMany('App\Http\Models\MessageCenter');
+    }
 }

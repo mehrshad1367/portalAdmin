@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a0a6a9-3d5e-49aa-88b1-0bb0537bf558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckPortalServiceAccess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +12,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -134,34 +133,27 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-=======
->>>>>>> master
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\portalAdmin\database\migrations\role_service" />
-      <recent name="C:\wamp64\www\portalAdmin\database\migrations\role_permission" />
-      <recent name="C:\wamp64\www\portalAdmin\app\Http\Model" />
-      <recent name="C:\wamp64\www\portalAdmin\app\Http\Controllers\Portal" />
-      <recent name="C:\wamp64\www\portalAdmin\app\Repositories\Interface" />
+      <recent name="C:\wamp64\www\portalAdmin\resources\views" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\portalAdmin" />
-    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -191,106 +183,30 @@
       <workItem from="1591129462313" duration="1963000" />
       <workItem from="1591168238458" duration="8925000" />
       <workItem from="1591180610619" duration="904000" />
-<<<<<<< HEAD
-      <workItem from="1591542354316" duration="4267000" />
-      <workItem from="1591629022998" duration="15401000" />
-      <workItem from="1591714814528" duration="11373000" />
-      <workItem from="1591799017859" duration="4687000" />
-      <workItem from="1592061192109" duration="5096000" />
-      <workItem from="1592113620997" duration="1460000" />
-      <workItem from="1592117092084" duration="4359000" />
-      <workItem from="1592150107104" duration="2451000" />
-      <workItem from="1592153502120" duration="1433000" />
-      <workItem from="1592203150673" duration="5269000" />
-      <workItem from="1592226432132" duration="4751000" />
-      <workItem from="1592247627487" duration="3525000" />
-      <workItem from="1592288266432" duration="12396000" />
-      <workItem from="1592322980276" duration="6200000" />
-      <workItem from="1592338343906" duration="1529000" />
-      <workItem from="1592378049290" duration="6498000" />
-      <workItem from="1592403302885" duration="8281000" />
-      <workItem from="1592466787323" duration="1515000" />
-      <workItem from="1592488964454" duration="3387000" />
-      <workItem from="1592572558683" duration="8987000" />
-      <workItem from="1592598414393" duration="2244000" />
-      <workItem from="1592643714051" duration="4472000" />
-      <workItem from="1592663081234" duration="3513000" />
-      <workItem from="1592726193719" duration="4755000" />
-      <workItem from="1592739487434" duration="543000" />
-      <workItem from="1592750080861" duration="1799000" />
-      <workItem from="1592814326562" duration="5746000" />
-      <workItem from="1592851987438" duration="4732000" />
-      <workItem from="1592897683855" duration="6093000" />
-      <workItem from="1593162878116" duration="481000" />
-      <workItem from="1593179710902" duration="8020000" />
-      <workItem from="1593243873888" duration="2397000" />
-=======
-<<<<<<< HEAD
-      <workItem from="1591542354316" duration="3994000" />
-=======
       <workItem from="1591213970212" duration="1368000" />
       <workItem from="1591256344257" duration="6445000" />
       <workItem from="1591456611321" duration="81000" />
       <workItem from="1591467765794" duration="627000" />
->>>>>>> f7d2160ba7b5f41a401b701b0e25a3fac11ea15b
->>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592583531393">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592583531393" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593187083468">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593187083468" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1592218085483">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592218085483" />
-    <state x="469" y="86" key="NewPhpClassDialog" timestamp="1592820409361">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="469" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1592820409361" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1592489785327">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1592489785327" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1592117417427">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592117417427" />
-    <state x="349" y="27" width="585" height="534" key="find.popup" timestamp="1593184470907">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="349" y="27" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593184470907" />
-    <state x="456" y="237" width="612" height="282" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592117389129">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="456" y="237" width="612" height="282" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1592117389129" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592252473671">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592252473671" />
   </component>
 </project>

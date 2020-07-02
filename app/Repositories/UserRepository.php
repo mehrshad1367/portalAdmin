@@ -4,11 +4,11 @@
 namespace App\Repositories;
 
 
-use App\Repositories\Interfaces\UserRepositoryInterface;
+use App\Repositories\Interfaces\RepositoryInterface;
 use App\Http\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository implements UserRepositoryInterface
+class UserRepository implements RepositoryInterface
 {
     protected $model;  //Ok
 
@@ -46,20 +46,10 @@ public function __construct(User $user)
             return $user;
     }
 
-    public function avatar($request,$id)
+    public function create(array $data)
     {
-        $user = $this->model->findOrFail($id);
-        $user->update([$user->avatar = $request->file('avatar')->store('public')]);
-        $user->save();
-
-    }
-
-    public function update_password(array $input, $id)
-    {
-        $user=$this->model->findOrFail($id);
-        $input['password']=Hash::make($input['password']);
-        $user->update($input);
-        $user->save();
+        // TODO: Implement insert() method.
+        return $this->model->create($data);
     }
 
 }
