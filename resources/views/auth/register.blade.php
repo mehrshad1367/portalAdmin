@@ -18,7 +18,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition register-page">
+<body dir="rtl" class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
         <a href="../../index2.html"><b>Admin</b>LTE</a>
@@ -26,7 +26,7 @@
 
     <div class="card">
         <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">ثبت نام</p>
 
             <form action="{{route('register')}}" method="post">
                 @csrf
@@ -85,26 +85,20 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="icheck-primary">
-                            <input type="checkbox" id="agreeTerms" class="form-control  @error('checkbox') is-invalid @enderror" name="checkbox" value="true">
-
                             <label for="agreeTerms">
-                                I agree to the <a href="#">terms</a>
+                                <a href="#">با قوانین موافقم</a>
                             </label>
+                            <input style="width: 10%" type="checkbox" id="agreeTerms" class="form-control  @error('checkbox') is-invalid @enderror" name="checkbox" value="true">
                             @error('checkbox')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block">ثبت نام</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -114,15 +108,15 @@
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-primary">
                     <i class="fab fa-facebook mr-2"></i>
-                    Sign up using Facebook
+                    ورود با حساب کاربری Facebook
                 </a>
                 <a href="#" class="btn btn-block btn-danger">
                     <i class="fab fa-google-plus mr-2"></i>
-                    Sign up using Google+
+                    ورود با حساب کاربری Google+
                 </a>
             </div>
 
-            <a href="login.html" class="text-center">I already have a membership</a>
+            <a href="login.html" class="text-center">قبلا ثبت نام کرده ام</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->

@@ -16,7 +16,7 @@ class MessageCenter extends Model
 
     public function user() //*receive*/
     {
-        return $this->belongsTo('App\Http\Models\User' , 'from_user_id');
+        return $this->belongsTo('App\Http\Models\User' , 'user_id');
     }
 
     public function to_user()  //*send*/

@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/redis', function () {
+//    return view('welcome');
+    $redis=app()->make('redis');
+
+    $redis->set('key1','Mehriiii');
+    return $redis->get('key1');
 });
 
 Auth::routes(['verify' => true]);
