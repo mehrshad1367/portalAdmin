@@ -28,6 +28,8 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/contact', 'ContactController@index')->name('contact');
 
+
+//-------------------------------------Profile-------------------------------------------
 Route::group(['middleware'=>['access'],'namespace' => 'profile'],function (){
     Route::get('/profile/{id}', 'ProfileController@show')->name('profile.show');
     Route::get('/profile/edit/{id}', 'ProfileController@edit')->name('profile.edit');
@@ -36,6 +38,8 @@ Route::group(['middleware'=>['access'],'namespace' => 'profile'],function (){
     Route::post('/profile/avatar/{id}', 'ProfileController@avatar')->name('profile.avatar');
     Route::post('/profile/editPass/{id}', 'ProfileController@update_password')->name('profile.editPass');
 });
+
+//-------------------------------------Message-------------------------------------------
 Route::namespace('MessageCenter')->group(function (){
     Route::get('/msg','MessageCenterController@index')->name('msg.index');
     Route::get('/msg/{id}','MessageCenterController@show')->name('msg.show')->where('id','[0-9]+');
@@ -45,4 +49,11 @@ Route::namespace('MessageCenter')->group(function (){
 //    Route::get('msg/send','MessageCenterController@send')->name('msg.send');
 });
 
+//-------------------------------------Google-------------------------------------------
+Route::get('google', function () {
+    return view('googleAuth');
+});
+
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
 

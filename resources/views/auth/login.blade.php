@@ -81,7 +81,7 @@
                 <a href="#" class="btn btn-block btn-primary">
                     <i class="fab fa-facebook mr-2"></i> ورود با حساب کاربری Facebook
                 </a>
-                <a href="#" class="btn btn-block btn-danger">
+                <a href="{{ url('auth/google') }}" class="btn btn-block btn-danger">
                     <i class="fab fa-google-plus mr-2"></i> ورود با حساب کاربری Google+
                 </a>
             </div>
