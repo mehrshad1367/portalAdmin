@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => '787068652653-9tp2o85lvo48m75sivtaeav1fb7p5tha.apps.googleusercontent.com',
         'client_secret' => 'nlWtA0q7flCMi1nYl7Wl6GpL',
-        'redirect' => 'http://socialite.div/auth/google/callback',
+        'redirect' => 'http://localhost/portalAdmin/public/index.php/auth/google/callback',
     ],
 
 ];

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -47,43 +48,49 @@ class LoginController extends Controller
         return redirect('login');
     }
 
-    public function redirectToGoogle()
+    public function redirectToProvider()
     {
         return Socialite::driver('google')->redirect();
     }
 
     public function handleGoogleCallback()
     {
-        $user = Socialite::driver('google')->user();
+//        $user = Socialite::driver('google')->stateless()->user();
+//
+//        return $user->token;
 
-        return $user->token;
+        try {
 
-//        try {
-//
-//            $user = Socialite::driver('google')->user();
-//
-//            $finduser = User::where('google_id', $user->id)->first();
-//
-//            if($finduser){
-//
-//                Auth::login($finduser);
-//
-//                return  redirect('/home');
-//
-//            }else{
-//                $newUser = User::create([
-//                    'name' => $user->name,
-//                    'email' => $user->email,
-//                    'google_id'=> $user->id
-//                ]);
-//
-//                Auth::login($newUser);
-//
-//                return redirect()->back();
-//            }
-//
-//        } catch (Exception $e) {
-//            return redirect('auth/google');
-//        }
+            $user = Socialite::driver('google')->stateless()->user();
+
+            $finduser = User::where('email', $user->email)->first();
+
+            if($finduser){
+
+                $finduser->save();
+                Auth::login($finduser);
+
+                return  redirect('/home');
+
+            }else{
+                $verified_at= date('Y-m-d H:i:s');
+
+
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'google_id'=> $user->id,
+                ]);
+                $newUser->email_verified_at = $verified_at;
+                $newUser->save();
+                
+                Auth::login($newUser);
+
+                return redirect()->back();
+            }
+
+        } catch (Exception $e) {
+            return redirect('auth/google');
+        }
     }
 }

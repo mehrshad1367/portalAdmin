@@ -62,10 +62,10 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="icheck-primary">
+                            <input name="remember" type="checkbox" id="remember">
                             <label for="remember">
                                 مرا به خاطر بسپار
                             </label>
-                            <input type="checkbox" id="remember">
                         </div>
                     </div>
                     <!-- /.col -->
