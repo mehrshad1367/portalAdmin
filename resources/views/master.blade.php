@@ -106,10 +106,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-comments"></i>
-                    <span class="badge badge-danger navbar-badge">{{Auth::user()->toMessagecenter()->count()}}</span>
+                    <span class="badge badge-danger navbar-badge">{{Auth::user()->toMessagecenter()->where("status",1)->count()}}</span>
                 </a>
                 <ul class="p-1 w-auto dropdown-menu">
                     @foreach(Auth::user()->toMessagecenter as $message)
+                        @if($message->status == 1)
                     <a href="{{url('/msg',['id'=>$message->id])}}" class="dropdown-item">
                         <!-- Message Start -->
 
@@ -127,6 +128,7 @@
                         </div>
                         <!-- Message End -->
                     </a>
+                        @endif
                     @endforeach
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>

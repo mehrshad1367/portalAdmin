@@ -25,6 +25,9 @@ class MessageCenterRepository implements RepositoryInterface
       {
           // TODO: Implement get() method.
          $msg= $this->model->findOrFail($id);
+         $msg->status = 0;
+         $msg->save();
+
          return $msg;
       }
 

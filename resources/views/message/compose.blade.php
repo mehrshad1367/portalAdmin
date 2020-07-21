@@ -40,7 +40,7 @@
                                     <li class="nav-item active">
                                         <a href="#" class="nav-link">
                                             <i class="fas fa-inbox"></i> Inbox
-                                            <span class="badge bg-primary float-right">12</span>
+                                            <span class="badge bg-primary float-right">{{Auth::user()->toMessagecenter()->where("status",1)->count()}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
