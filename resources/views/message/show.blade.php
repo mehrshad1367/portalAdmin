@@ -25,7 +25,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="mailbox.html" class="btn btn-primary btn-block mb-3">Back to Inbox</a>
+                        <a href="{{route('msg.index')}}" class="btn btn-primary btn-block mb-3">Back to Inbox</a>
 
                         <div class="card">
                             <div class="card-header">
@@ -39,25 +39,19 @@
                             <div class="card-body p-0">
                                 <ul class="nav nav-pills flex-column">
                                     <li class="nav-item active">
-                                        <a href="#" class="nav-link">
+                                        <a href="{{route('msg.index')}}" class="nav-link">
                                             <i class="fas fa-inbox"></i> Inbox
                                             <span class="badge bg-primary float-right">{{Auth::user()->toMessagecenter()->where("status",1)->count()}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="{{route('msg.outbox')}}" class="nav-link">
                                             <i class="far fa-envelope"></i> Sent
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-file-alt"></i> Drafts
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="fas fa-filter"></i> Junk
-                                            <span class="badge bg-warning float-right">65</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
