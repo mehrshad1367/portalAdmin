@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="{{asset('portal/plugins/summernote/summernote-bs4.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-daygrid/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-timegrid/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-bootstrap/main.min.css")}}>
+    <!-- Theme style -->
+    <link rel="stylesheet" href={{asset("portal/dist/css/adminlte.min.css")}}>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body dir="rtl" class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -318,12 +327,12 @@
                         </ul>
                     </li>
                     <li class="nav-header">EXAMPLES</li>
-                    <li class="nav-item">
-                        <a href="pages/calendar.html" class="nav-link">
+                    <li class="nav-item ">
+                        <a href="{{route('calender.index')}}" class="nav-link">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Calendar
-                                <span class="badge badge-info right">2</span>
+                                <span class="badge badge-light right">2</span>
                             </p>
                         </a>
                     </li>

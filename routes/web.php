@@ -57,3 +57,8 @@ Route::get('google', function () {
 Route::get('auth/google', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
+//-------------------------------------Calender-------------------------------------------
+Route::namespace('Calender')->group(function (){
+
+    Route::get('calender','CalenderEvent@index')->name('calender.index');
+});

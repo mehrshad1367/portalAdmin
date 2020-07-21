@@ -37,7 +37,7 @@
                     </div>
                     <div class="card-body p-0">
                         <ul class="nav nav-pills flex-column">
-                            <li class="nav-item active" id="s">
+                            <li class="nav-item active" id="myActive">
                                 <a href="#" class="nav-link active">
                                     <i class="fas fa-inbox"></i> Inbox
                                     <span class="badge bg-primary float-right">{{Auth::user()->toMessagecenter()->where("status",1)->count()}}</span>
