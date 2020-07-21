@@ -4,8 +4,7 @@ $('#inputProfileImg').on('change',function(){
   //replace the "Choose a file" label
   $(this).next('.custom-file-label').html(fileName);
 })
-
-
+//as
 // Add active class to the current button (highlight it)
 var header = document.getElementById("myActive");
 var btns = header.getElementsByClassName("nav-link");
