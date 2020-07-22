@@ -9,7 +9,7 @@
                     <div class="col-sm-6">
                         <h1 class="m-0 text-dark">Dashboard</h1>
                     </div><!-- /.col -->
-                    <div class="col-sm-6 mr-3-1 "style="direction: ltr">
+                    <div class="col-sm-6 mr-3-1 " style="direction: ltr">
                         <ol class="breadcrumb ">
                             <li class="breadcrumb-item active">خانه</li>
                             <li class="breadcrumb-item active">Dashboard v1</li>

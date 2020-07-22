@@ -10,12 +10,12 @@
                     <div class="col-sm-6">
                         <h1>Calendar</h1>
                     </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Calendar</li>
+                    <div class="col-sm-6 mr-3-1 " style="direction: ltr">
+                        <ol class="breadcrumb ">
+                            <li class="breadcrumb-item active">خانه</li>
+                            <li class="breadcrumb-item active">تقویم</li>
                         </ol>
-                    </div>
+                    </div><!-- /.col -->
                 </div>
             </div><!-- /.container-fluid -->
         </section>

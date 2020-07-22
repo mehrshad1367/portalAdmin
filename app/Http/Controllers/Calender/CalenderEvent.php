@@ -11,4 +11,9 @@ class CalenderEvent extends Controller
     {
         return view('calender.index');
     }
+
+    public function create()
+    {
+
+    }
 }
