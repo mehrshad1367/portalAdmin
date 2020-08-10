@@ -2,16 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::get('/redis', function () {
 //    return view('welcome');
@@ -60,5 +51,9 @@ Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
 //-------------------------------------Calender-------------------------------------------
 Route::namespace('Calender')->group(function (){
 
-    Route::get('calender','CalenderEvent@index')->name('calender.index');
+    Route::get('calender.show','CalenderEventController@show')->name('calender.show');
+    Route::get('calender.index','CalenderEventController@index')->name('calender.index');
+    Route::post('calender/create','CalenderEventController@create')->name('calender.create');
+    Route::post('calender/update','CalenderEventController@update')->name('calender.update');
+    Route::post('calender/delete','CalenderEventController@destroy')->name('calender.delete');
 });

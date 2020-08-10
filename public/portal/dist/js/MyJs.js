@@ -1,3 +1,10 @@
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+
+//--------------------------active btn--------------------------
 $('#inputProfileImg').on('change',function(){
   //get the file name
   var fileName = $(this).val();
@@ -18,4 +25,26 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+//--------------------------calender--------------------------
+function insert_Event(){
+  var Title = $('#event-register-form #title').val();
+  var Start = $('#event-register-form #start').val();
+  var End = $('#event-register-form #end').val();
 
+  if (Title =='' || Start =='' || End ==''){
+    $('#blank_message').html('Please Fill in the Blanks');
+  }else{
+    $.ajax({
+      location:'calender',
+      url: 'calender/create',
+      method:'Post',
+      datatype:'json',
+      data:{title:Title, start:Start, end:End},
+      success: function (response) {
+
+        $('#event-register-form').trigger("reset");
+        $('#AddEvent').modal('hide');
+      }
+    })
+  }
+}

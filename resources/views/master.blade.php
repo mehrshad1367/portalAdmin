@@ -328,7 +328,7 @@
                     </li>
                     <li class="nav-header">EXAMPLES</li>
                     <li class="nav-item ">
-                        <a href="{{route('calender.index')}}" class="nav-link">
+                        <a href="{{route('calender.show')}}" class="nav-link">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Calendar
