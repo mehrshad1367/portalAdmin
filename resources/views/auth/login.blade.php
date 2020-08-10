@@ -62,10 +62,10 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="icheck-primary">
+                            <input name="remember" type="checkbox" id="remember">
                             <label for="remember">
                                 مرا به خاطر بسپار
                             </label>
-                            <input type="checkbox" id="remember">
                         </div>
                     </div>
                     <!-- /.col -->
@@ -81,7 +81,7 @@
                 <a href="#" class="btn btn-block btn-primary">
                     <i class="fab fa-facebook mr-2"></i> ورود با حساب کاربری Facebook
                 </a>
-                <a href="#" class="btn btn-block btn-danger">
+                <a href="{{ url('auth/google') }}" class="btn btn-block btn-danger">
                     <i class="fab fa-google-plus mr-2"></i> ورود با حساب کاربری Google+
                 </a>
             </div>

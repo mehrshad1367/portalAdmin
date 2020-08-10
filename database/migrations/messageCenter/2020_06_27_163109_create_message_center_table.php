@@ -18,6 +18,7 @@ class CreateMessageCenterTable extends Migration
             $table->integer('to_user_id');
             $table->integer('from_user_id');
             $table->integer('role_id');
+            $table->integer('status');
             $table->string('title');
             $table->text('body');
             $table->timestamp('read_at')->nullable();

@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="{{asset('portal/plugins/summernote/summernote-bs4.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-daygrid/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-timegrid/main.min.css")}}>
+    <link rel="stylesheet" href={{asset("portal/plugins/fullcalendar-bootstrap/main.min.css")}}>
+    <!-- Theme style -->
+    <link rel="stylesheet" href={{asset("portal/dist/css/adminlte.min.css")}}>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body dir="rtl" class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -106,10 +115,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-comments"></i>
-                    <span class="badge badge-danger navbar-badge">{{Auth::user()->toMessagecenter()->count()}}</span>
+                    <span class="badge badge-danger navbar-badge">{{Auth::user()->toMessagecenter()->where("status",1)->count()}}</span>
                 </a>
                 <ul class="p-1 w-auto dropdown-menu">
                     @foreach(Auth::user()->toMessagecenter as $message)
+                        @if($message->status == 1)
                     <a href="{{url('/msg',['id'=>$message->id])}}" class="dropdown-item">
                         <!-- Message Start -->
 
@@ -127,6 +137,7 @@
                         </div>
                         <!-- Message End -->
                     </a>
+                        @endif
                     @endforeach
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
@@ -199,7 +210,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Pages
@@ -316,12 +327,12 @@
                         </ul>
                     </li>
                     <li class="nav-header">EXAMPLES</li>
-                    <li class="nav-item">
-                        <a href="pages/calendar.html" class="nav-link">
+                    <li class="nav-item ">
+                        <a href="{{route('calender.show')}}" class="nav-link">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Calendar
-                                <span class="badge badge-info right">2</span>
+                                <span class="badge badge-light right">2</span>
                             </p>
                         </a>
                     </li>

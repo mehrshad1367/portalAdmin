@@ -49,7 +49,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition login-page">
+<body dir="rtl" class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
         <a href="../../index2.html"><b>Admin</b>LTE</a>
@@ -58,7 +58,7 @@
     <div class="card">
         <div class="card-body login-card-body">
 {{--            <p class="login-box-msg">Sign in to start your session</p>--}}
-            <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+            <div class="card-header">{{ __('حساب کاربری خود را فعال کنید') }}</div>
 
             <div class="card-body">
                 @if (session('resent'))
@@ -67,10 +67,10 @@
                     </div>
                 @endif
 
-                {{ __('Before proceeding, please check your email for a verification link.') }}
-                {{ __('If you did not receive the email') }},
+                {{ __('لینک فعال سازی حساب کاربری شما به ایمیل شما ارسال گردید') }}
+                {{ __('درصورت عدم دریافت لینک:') }}
                     <p class="mb-1">
-                        <a type="submit" href="{{ route('verification.resend') }}" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</a>.
+                        <a type="submit" href="{{ route('verification.resend') }}" class="btn btn-link p-0 m-0 align-baseline">{{ __('برای دریافت مجدد لینک فعالسازی اینجا کلیک کنید') }}</a>.
                     </p>
             </div>
 
@@ -109,13 +109,13 @@
                         <div class="icheck-primary">
                             <input type="checkbox" id="remember">
                             <label for="remember">
-                                Remember Me
+                                مرا بخاطر بسپار
                             </label>
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        <button type="submit" class="btn btn-primary btn-block">ورود</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -124,23 +124,23 @@
             <div class="social-auth-links text-center mb-3">
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                    <i class="fab fa-facebook mr-2"></i> ورود با حساب کاربری Facebook
                 </a>
                 <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                    <i class="fab fa-google-plus mr-2"></i> ورود با حساب کاربری Google+
                 </a>
             </div>
             <!-- /.social-auth-links -->
 
-            <p class="mb-1">
+            <p class="m-1">
                 @if (Route::has('password.request'))
                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
+                        {{ __('فراموشی رمز عبور') }}
                     </a>
                 @endif
             </p>
-            <p class="mb-0">
-                <a href="{{route('register')}}" class="text-center">Register a new membership</a>
+            <p class="m-3">
+                <a href="{{route('register')}}" class="text-center">ثبت نام کاربر جدید</a>
             </p>
         </div>
         <!-- /.login-card-body -->
