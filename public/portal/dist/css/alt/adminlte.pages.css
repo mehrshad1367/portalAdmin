@@ -5,8 +5,11 @@
  *   Website: AdminLTE.io <http://adminlte.io>
  *   License: Open source - MIT <http://opensource.org/licenses/MIT>
  */
+body{
+  direction: rtl;
+}
 .close, .mailbox-attachment-close {
-  float: right;
+  float: left;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
@@ -72,15 +75,15 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .mailbox-attachments {
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 
 .mailbox-attachments li {
   border: 1px solid #eee;
-  float: left;
+  float: right;
   margin-bottom: 10px;
-  margin-right: 10px;
+  margin-left: 10px;
   width: 200px;
 }
 
@@ -165,7 +168,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .lockscreen-image {
   border-radius: 50%;
   background: #ffffff;
-  left: -10px;
+  right: -10px;
   padding: 5px;
   position: absolute;
   top: -25px;
@@ -179,7 +182,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .lockscreen-credentials {
-  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .lockscreen-credentials .form-control {
@@ -242,7 +245,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-card-body .input-group .form-control,
 .register-card-body .input-group .form-control {
-  border-right: 0;
+  border-left: 0;
 }
 
 .login-card-body .input-group .form-control:focus,
@@ -278,9 +281,9 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .login-card-body .input-group .input-group-text,
 .register-card-body .input-group .input-group-text {
   background-color: transparent;
-  border-bottom-right-radius: 0.25rem;
-  border-left: 0;
-  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-right: 0;
+  border-top-left-radius: 0.25rem;
   color: #777;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -308,7 +311,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .error-page > .headline {
-  float: left;
+  float: right;
   font-size: 100px;
   font-weight: 300;
 }
@@ -322,12 +325,12 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .error-page > .error-content {
   display: block;
-  margin-left: 190px;
+  margin-right: 190px;
 }
 
 @media (max-width: 767.98px) {
   .error-page > .error-content {
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -404,7 +407,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   background-color: #ffffff;
   border: 1px solid #dee2e6;
   display: flex;
-  margin-right: 1rem;
+  margin-left: 1rem;
   max-width: 7rem;
   padding: 0.5rem;
 }
@@ -420,7 +423,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .product-share a {
-  margin-right: .5rem;
+  margin-left: .5rem;
 }
 
 .projects td {

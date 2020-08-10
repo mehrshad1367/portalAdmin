@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Http\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','family', 'email', 'password','avatar',
     ];
 
     /**
@@ -36,4 +36,24 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo('App\Http\Models\Role' , 'role_id');
+    }
+
+    public function toMessagecenter()
+    {
+        return $this->hasMany('App\Http\Models\MessageCenter','to_user_id');
+    }
+
+    public function fromMessagecenter()
+    {
+        return $this->hasMany('App\Http\Models\MessageCenter','from_user_id');
+    }
+
+    public function notification()
+    {
+        return $this->hasMany('App\Http\Models\Notification');
+    }
 }

@@ -1,8 +1,7 @@
 @extends('master')
-
 @section('content')
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div  class="content-wrapper ">
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -10,9 +9,9 @@
                     <div class="col-sm-6">
                         <h1 class="m-0 text-dark">Dashboard</h1>
                     </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <div class="col-sm-6 mr-3-1"style="direction: ltr">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">خانه</li>
                             <li class="breadcrumb-item active">Dashboard v1</li>
                         </ol>
                     </div><!-- /.col -->
@@ -20,7 +19,6 @@
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -154,7 +152,7 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="{{asset('portal/dist/img/user1-128x128.jpg')}}" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             Is this template really for free? That's unbelievable!
@@ -170,7 +168,7 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="{{asset('portal/dist/img/user3-128x128.jpg')}}" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             You better believe it!
@@ -186,7 +184,7 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="{{asset('portal/dist/img/user1-128x128.jpg')}}" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             Working with AdminLTE on a great new app! Wanna join?
@@ -202,7 +200,7 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="{{asset('portal/dist/img/user3-128x128.jpg')}}" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             I would love to.
@@ -219,7 +217,7 @@
                                     <ul class="contacts-list">
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user1-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -234,7 +232,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user7-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user7-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -249,7 +247,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user3-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user3-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -264,7 +262,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user5-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user5-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -279,7 +277,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user6-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user6-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -294,7 +292,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user8-128x128.jpg">
+                                                <img class="contacts-list-img" src="{{asset('portal/dist/img/user8-128x128.jpg')}}">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -323,7 +321,6 @@
                                     </div>
                                 </form>
                             </div>
-                            <!-- /.card-footer-->
                         </div>
                         <!--/.direct-chat -->
 
@@ -610,6 +607,6 @@
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+        </div>
+        <!-- /.content-wrapper -->
 @endsection
